@@ -3,7 +3,7 @@ import theme from '@nuxt/content-theme-docs'
 export default theme({
   target: 'static',
   router: {
-    base: '/nxtYAPdocs/'
+    base: '/automation-platform-docs/'
   },
   docs: {
     primaryColor: '#38D4FF'
