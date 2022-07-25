@@ -1,7 +1,7 @@
 ---
-title: Explore vaults
+title: Invest in a public vault
 description: ''
-position: 11
+position: 12
 category: 'Vaults'
 ---
 
