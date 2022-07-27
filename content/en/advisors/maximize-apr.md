@@ -15,25 +15,25 @@ Description coming soon.
 
 The advisor will be notified via email if an error occurs during advisor execution.
 
-#### Endpoint
+#### Minimum Transaction Size (Tmin)
 
-The endpoint specifies the URL where the advisor program is hosted. 
+The vault will only transact if the value of available assets for a transaction exceeds the minimum transaction size. This setting is used to reduce the effect gas costs have on profitability of the vault, especially for smaller investment amounts
 
-#### Gas
+#### Monitoring Frequency (minutes)
 
-coming soon.
+Determines how often the advisor will apply the strategy against the assets in the vault. In general daily should be a good value, but for larger vaults shorter timeframes are usually more beneficial.
 
-#### Tmin
+#### Estimated Gas Cost
 
-The minimum amount that must be present in a vault in order to carry out the execution.
+To determine whether switching between protocols is profitable the Maximize APR strategy takes estimated gas costs into account. Higher estimated gas costs will reduce the number of transactions in your vault and will thereby improve profitability.
 
-#### Dinv
+#### Look forward period (Days)
 
-Dinv is the look-ahead duration in days used to calculate the protocol changeover in Maximise APR.
+This is the timeframe used to calculate the total return that could be earned during the look forward period. Maximize APR only switches protocols if the expected earnings of the new protocol during the Look Forward Period exceeds estimated gas costs + slippage + Transaction Fees (not gas)
 
-#### T
+#### Forced Rebalance
 
-The T represents the time in minutes for the chrone job to run in the vault.
+If forced rebalance is selected the vault will rebalance your positions even if the minimum transaction size is not reached for any of your positions. This can have a severely negative impact on performance due to gas costs and should only be used for vaults carrying larger balances.
 
 #### Protocols
 

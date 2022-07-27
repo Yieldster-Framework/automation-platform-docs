@@ -15,18 +15,18 @@ Description coming soon.
 
 The advisor will be notified via email if an error occurs during advisor execution.
 
-#### Endpoint
+#### Minimum transaction size (Tmin)
 
-The endpoint specifies the URL where the advisor program is hosted. 
+The vault will only transact if the value of available assets for a transaction exceeds the minimum transaction size. This setting is used to reduce the effect gas costs have on profitability of the vault, especially for smaller investment amounts
 
-#### T (in minutes)
+#### Monitoring Frequency (minutes)
 
-The minimum amount that must be present in a vault in order to carry out the execution.
-
-#### Protocols
-
-Select the protocols, from which the advisor will choose the protocol with the highest APR and invest the vault assets in that protocol.
+Determines how often the advisor will apply the strategy against the assets in the vault. In general daily should be a good value, but for larger vaults shorter timeframes are usually more beneficial.
 
 #### Foreced Rebalance
 
-If the vault administrator enables Forced rebalance, the advisor will execute even if the assets in the vault are less than the minimum transaction size, i.e. the Tmin value.
+If forced rebalance is selected the vault will rebalance your positions even if the minimum transaction size is not reached for any of your positions. This can have a severely negative impact on performance due to gas costs and should only be used for vaults carrying larger balances.
+
+#### Protocols
+
+Set the percentage share a protocol should have in your portfolio.
