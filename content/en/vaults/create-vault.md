@@ -1,7 +1,7 @@
 ---
 title: Create a Vault
 description: ''
-position: 13
+position: 15
 category: 'Vaults'
 ---
 
